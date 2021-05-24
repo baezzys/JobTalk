@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>로그인</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+        <link rel= "stylesheet" th:href = "@{/style2.css}"/>
+        <style>
+            @font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+            body {
+                font-family: 'TmoneyRoundWindExtraBold';
+            }
+
+            .login {
+                width: 100%;
+            }
+
+        </style>
+    
+    </head>
+    <body>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4"><b>알바톡 로그인</b></h1>
+              
+            </div>
+          </div>
+
+
+        <div class="container">
+        <!--form action="https://naver.com/"-->
+        
+        <!--로그인폼-->
+        <!--아이디-->
+        <div class="login">
+        <h3 for="loginid" class="labelid">ID</h3>
+        <input type="text" id="loginid" class="form-control" aria-describedby="passwordHelpBlock">
+        <small id="passwordHelpBlock" class="form-text text-muted">
+        </small>
+        <br>
+    
+        <!--비밀번호-->
+        <h3 for="loginpw" class="labelpw">PASSWORD</h3>
+<input type="password" id="loginpw" class="form-control" aria-describedby="passwordHelpBlock">
+<small id="passwordHelpBlock" class="form-text text-muted">
+</small>
+
+<br>
+<button type="summit" id="loginnbtn" label for="loginbtn" class="btn btn-warning btn-lg btn-block">로그인</button>
+        </form>
+<br>
+
+<div  class = "login_box">
+    <button type ="summit" id = "kakaologbtn" class = "kakaolog" >  <a href = " #"> <img th:src= "@{/images/kakaologin.png}" alt ="카카오계정으로 로그인" width = "200" height = "40" ;> </a></button>
+    <button type ="summit" id = "naverlogbtn" class = "naverlog" >  <a><img th:src= "@{/images/naver.png}" alt ="네이버계정으로 로그인" width = "200" height = "40";> </a></button>
+    <button type ="summit" id = "facebooklogbtn" class = "facebooklog" >  <a><img th:src= "@{/images/facebook.png}" alt ="페이스북계정으로 로그인" width = "200" height = "40";> </a></button>
+    <button type ="summit" id = "googlelogbtn" class = "googlelog" >  <a><img th:src= "@{/images/google.png}" alt ="구글계정으로 로그인" width = "250" height = "40";> </a></button>
+</div>
+    
+
+        
+<br>
+<br>
+    
+</body>
+   
+</html>
+
+
+    
