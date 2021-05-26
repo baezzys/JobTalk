@@ -25,8 +25,13 @@
                     <a href="#">글쓰기</a>
                 </div>
 
-                <div class = "log_in">
+
+                <div class = "log_in" th:if="${param.error}">
                     <a th:href="@{/login}">로그인</a>
+                </div>
+
+                <div class = "log_in" th:if="${``````````param.login}">
+                    <a th:href="@{/logout}">로그아웃</a>
                 </div>
 
             </header>

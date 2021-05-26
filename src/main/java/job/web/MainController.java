@@ -12,6 +12,11 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/loginSuccess")
+    public String loginSuccess(Model model) {
+        model.addAllAttributes()
+    }
+
     @GetMapping("/login")
     public String login(Model model) {
         return "login";
