@@ -1,35 +1,82 @@
-*{margin: 0 ; padding: 0; border: 0;}
+*{margin: 0; padding: 0; border: 0;}
+/* body{font-family: '돋움', '맑은 고딕', sans-serif, Arial;} */
+ul, li{list-style: none; }
 a{text-decoration: none; color: black;}
-ul,li{list-style: none;}
-.cf:after{content: ''; display: block; clear: both;}
-.fl{float: left;}
-.fr{float: right;}
-.cl{clear:left;}
-
-#wrap{width: 1420px; height: 1500px; margin : 0 auto; background:  #ffffff;}
-
+ .fl{float: left;}
+ .cf:after{display: block; content: ''; clear: both;}
+ 
+ #wrap{width: 1420px; height: 1200px; background: url(main.png) no-repeat; margin: 0 auto; }
+ 
 /* 헤더 */
 #header{width: 1420px; height: 130px; border-bottom: 1px solid #cccccc; }
 .h_logo{width:  97 px; height: 100px; float:left; margin-top: 30px; margin-left: 30px;}
-#header h1 {width: 220px; height: 100px; font-size: 25px; float:left; margin-top: 52px; margin-left: 12px;}
+#header h1 {width: 220px; height: 70px; font-size: 25px; float:left; margin-top: 52px; margin-left: 12px;}
 .h_box {width: 800px; height: 100%;float : left;}
 .write{width: 100px; height : 25px; background : #999999; border-radius: 10px; float: left; text-align: center; padding-top: 10px; margin-top:50px;}
 .write a {color: #ffffff;}
-.log_in{width: 100px; height : 25px; border :1px solid #777777; border-radius: 10px; float: left; text-align: center;padding-top: 10px; margin-top:50px; margin-left: 10px;}
+.log_in{width: 100px; height : 25px; border :1px solid #777777; border-radius: 5px; float: left; text-align: center;padding-top: 10px; margin-top:50px; margin-left: 10px;}
 .log_in a {color: #000000;}
+.h_write{width: 70px; height: 43px; background: #999999; border: 2px solid #555555; border-radius: 5px; text-align: center; }
+.h_write a{display: block; color: #ffffff; font-size: 17px; margin-top: 10px; font-weight: bold; vertical-align: middle; }
+.h_login{width: 70px; height: 43px; background: #ffffff; border: 2px solid #555555; margin-left: 10px; border-radius: 5px; text-align: center; }
+.h_login a{display: block; color: black; font-size: 17px; margin-top: 10px; font-weight: bold; vertical-align: middle; }
 
-/* 배너 */
-#section{width: 1420px; height: 1400px;}
-.banner{width: 100%; height : 350px;}
-.banner img{margin: 0px auto; margin-left : 130px; margin-top: -10px;}
 
-/* 글쓰기 부분 */
-.contents_wrap{float: left; width: 32%; height: 26%;}
-.contents_wrap ul{border: 1px solid #cccccc; width: 320px; height: 250px;margin-top: 40px; margin-left: 130px;}
-.contents_wrap ul .board{margin-left: 20px;margin-top: 15px;}
-.contents_wrap .title{border-bottom: 1px solid #777777; height:50px;font-size : 18px; font-weight: bold; margin-top: -10px; padding-bottom: 10px;}
-.contents_wrap .title a{display : block; padding:  20px; color: #000000;}
-.contents_wrap .title span{float:right; font-size :15px; color:#777777; margin-top: 10px;}
+
+/*
+#header{width: 1420px; height: 70px; border-bottom: 1px solid #cccccc;}
+.h_logo{width: 200px; height: 50px; margin-top: 10px; margin-left: 44px;}   
+.h_logo a{font-size: 24px; color: #000000; letter-spacing: -1px;}   
+.bottonbox{width: 200px; height: 50px;  margin-left: 1219px; padding-top: 12px;}
+.h_write{width: 70px; height: 43px; background: #555555; border: 2px solid #555555; border-radius: 13px 13px; text-align: center; }
+.h_write a{display: block; color: #ffffff; font-size: 17px; margin-top: 10px; font-weight: bold; vertical-align: middle; }
+.h_login{width: 70px; height: 43px; background: #ffffff; border: 2px solid #555555; margin-left: 10px; border-radius: 13px 13px; text-align: center; }
+.h_login a{display: block; color: #555555; font-size: 17px; margin-top: 10px; font-weight: bold; vertical-align: middle; }
+.h_login:hover{ background: #555555;}
+.h_login a:hover{ color: #ffffff;}
+.h_write_h{width: 100px; height : 25px; background : #999999; border-radius: 10px; float: left; text-align: center; padding-top: 10px; margin-top:50px;}
+.h_login_h{width: 100px; height : 25px; border :1px solid #777777; border-radius: 10px; float: left; text-align: center;padding-top: 10px; margin-top:50px; margin-left: 10px;}
+
+*/
+
+/* 섹션 */
+#section{width: 1420px; height: 1563px;}
+/* 왼쪽컨텐츠 */
+.content_left{width: 910px; height: 1500px; margin-left: 46px; margin-top: 34px; }
+.cts1_wrap{width: 100%; height: 575px; border: 1px solid #d1d1d1; border-radius: 5px; }
+.cts_title{width: 910px; height: 90px;}
+.title{width: 200px; height: 50px; margin-top: 10px; margin-left: 44px;}
+.title{font-size: 29px; letter-spacing: -1px; margin-left: 25px; margin-top: 23px; font-weight: bold;}
+.botton{width: 180px; height: 50px;  margin-left: 728px; padding-top: 24px;}
+.cts1{width: 100%; height: 50px;}
+.cts1 form{width: 200px; height: 100%;}
+.cts1 select{width: 89%; height: 92%; margin-left: 30px; font-size: 19px; border: 2px solid #555555; border-radius: 5px; text-align:center;}
+.wpahr{    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sodyd{    font-size: 20px;
+    margin-top: -24px;
+    margin-left: 20px;
+}
+
+.cts1_box input{width: 745px; height: 30px; border: 1px solid black; border-radius: 5px; margin-bottom:  50px; margin-left: 83px; }
+.cts1_box textarea{margin-left: 83px; border: 1px solid black; border-radius: 5px; width: 745px; height: 250px;}
+
+/*
+.cts2_wrap .cts2_title .cts1 .point{width: 800px; height: 30px; margin-left: 70px; margin-bottom: 20px; margin-top: 20px;font-size: 17px; float: left;}
+.cts2_wrap .cts2_title .cts1 .point ul{width: 20px; height: 20px; margin-left: 50px; float: left;}
+.cts2_wrap .cts2_tilte .cts1 .point img{width : 20px; height: 20px;float: left;}
+*/
+.cts2_wrap{margin-top: 58px; width: 100%; height: 863px; border: 1px solid #d1d1d1; border-radius: 15px; }
+.cts2_title{width: 910px; height: 90px;}
+.title2{width: 200px; height: 50px; margin-top: 10px; margin-left: 44px;}
+.title2{font-size: 29px; letter-spacing: -1px; margin-left: 25px; margin-top: 23px; font-weight: bold;}
+.box{width: 200px; height: 50px;  margin-left: 728px; padding-top: 24px;}
+
+
+/* 오른쪽컨텐츠 */
+
 
 /* 랭크 */
 .rank{float: right;}
@@ -43,9 +90,11 @@ ul,li{list-style: none;}
 
 .rank .middle{width: 300px; height: 40px; margin-left: 120px; font-size: 24px; margin-bottom: 10px;}
 
-.rank .popular{border: 1px solid #cccccc; width: 300px; height:130px; margin-bottom:10px; margin-left: 80px; border-radius: 15px;}
+.rank .popular{border: 1px solid #cccccc; width: 300px; height:130px; margin-bottom:20px; margin-left: 80px; border-radius: 15px;}
 .rank .popular .branch{width:100px; height:100px;  float:left;}
 .rank .popular .branch_m img{width:100px; height:80px;  float:left; margin-top:10px}
+.rank .popular .branch_t img{width:100px; height:80px;  float:left; margin-top:10px}
+.rank .popular .branch_s img{width:100px; height:90px;  float:left; margin-top:10px}
 .rank .popular .branch_g img{width:100px; height:100px;  float:left; margin-top:10px}
 .rank .popular .branch img{width: 100px; height: 100px; float: left;}
 .rank .popular .name{width: 190px; height: 25px; float: left; text-align: center; margin-top: 10px;}
@@ -55,9 +104,8 @@ ul,li{list-style: none;}
 
 
 
-
- /*푸터*/
-#footer{width: 1420px; height: 330px;background: #cccccc; margin-top: -30px;}
+/* 푸터 */
+#footer{width: 1420px; height: 330px;background: #cccccc;}
 #footer_wrap1{width: 1420px; height: 330px;  margin: 0 auto; border-left: 1px solid #b1b1b1; border-right: 1px solid #b1b1b1; border-top: 1px solid #b1b1b1; box-sizing: border-box; background: #585858;}
 .footerW1_Top{width: 1420px; height: 330px; border-top: 1px solid #b1b1b1; border-bottom: 1px solid #b1b1b1; box-sizing: border-box;}
 

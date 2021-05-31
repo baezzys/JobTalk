@@ -1,6 +1,9 @@
 <!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <html>
     <head>
+
         <link rel = "stylesheet" th:href= "@{/style.css}"/>
         <title>알바톡! | 알바생들의 리뷰 플랫폼 </title>
         <meta charset="utf-8">
@@ -22,17 +25,17 @@
                 </div>
 
                 <div class ="write"> 
-                    <a href="#">글쓰기</a>
+                    <a th:href="@{/write}">글쓰기</a>
                 </div>
 
 
-                <div class = "log_in" th:if="${param.error}">
+                <form class = "log_in" th:if="${param.error}" sec:authorize="isAnonymous()" th:action="@{/login}">
                     <a th:href="@{/login}">로그인</a>
-                </div>
+                </form>
 
-                <div class = "log_in" th:if="${``````````param.login}">
+                <form class = "log_in" sec:authorize="isAuthenticated()">
                     <a th:href="@{/logout}">로그아웃</a>
-                </div>
+                </form>
 
             </header>
 
@@ -46,7 +49,7 @@
 
                 <div class = "contents_wrap">
                     <ul>
-                        <li class = "title"><a href="#">베스트 톡<img th:src= "@{/images/img3.png}" width = "25" height = "25"> <span>더보기 ></span></a> </li>
+                        <li class = "title"><a th:href="@{/border_b}">베스트 톡<img th:src= "@{/images/img3.png}" width = "25" height = "25"> <span>더보기 ></span></a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
@@ -55,7 +58,7 @@
                     </ul>
 
                     <ul>
-                        <li class = "title"><a href="#">대타 톡 <img th:src= "@{/images/img4.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
+                        <li class = "title"><a th:href="@{/border_d}">대타 톡 <img th:src= "@{/images/img4.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
@@ -64,7 +67,7 @@
                     </ul>
 
                     <ul>
-                        <li class = "title"><a href="#">홍보 톡 <img th:src= "@{/images/img1.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
+                        <li class = "title"><a th:href="@{/border_h}">홍보 톡 <img th:src= "@{/images/img1.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
@@ -75,7 +78,7 @@
 
                 <div class = "contents_wrap">
                     <ul>
-                        <li class = "title"><a href="#">알바 톡<img th:src= "@{/images/img2.png}" width = "25" height = "25"> <span>더보기 ></span></a> </li>
+                        <li class = "title"><a th:href="@{/border_a}">알바 톡<img th:src= "@{/images/img2.png}" width = "25" height = "25"> <span>더보기 ></span></a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
@@ -84,7 +87,7 @@
                     </ul>
 
                     <ul>
-                        <li class = "title"><a href="#">매장 톡 <img th:src= "@{/images/img5.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
+                        <li class = "title"><a th:href="@{/border_m}">매장 톡 <img th:src= "@{/images/img5.png}" width = "25" height = "25"><span>더보기 ></span></a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
                         <li class = "board"><a href="#">게시물 제목</a> </li>
@@ -116,7 +119,105 @@
                 </div>
             </section>
 
-            <footer id = "footer"></footer>
+            <footer id = "footer">
+                <div id ="footer_wrap1" class ="cf">
+                    <div class="footerW1_Top cf">
+                        <div class="footerW1_1 cf fl ">
+                            <div class="footer1_1_1 fl">
+                                <div class="footerW1_Title"><h3>알바정보 및 채용 홈페이지 바로가기</h3></div>
+                                <div class="footerW1_Link">
+                                    <ul class="LinkBox_left fl">
+                                        <li><a href="#">알바몬<span>></span></a></li>
+                                        <li class ="last"><a href="#">고용노동부<span>></span></a></li>
+                                    </ul>
+
+                                    <ul class="LinkBox_right fl">
+                                        <li><a href="#">알바천국<span>></span></a></li>
+                                        <li class ="last"><a href="#"><span>></span></a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footerW1_1 fl ">
+                            <div class="footer1_1_1 fl">
+                                <div class="footerW1_Title"><h3>알바몬 소통 매체</h3></div>
+                                <div class="footerW1_Link">
+                                    <div class="footerW1_Link1 cf">
+                                        <div class="facebook">
+                                            <div class="f_facelogo"></div>
+                                            <div class="f_face_name">페이스북</div>
+                                            <div class="f_face"></div>
+                                        </div>
+                                        <div class="youtube">
+                                            <div class="y_youlogo"></div>
+                                            <div class="y_you_name">유튜브</div>
+                                            <div class="y_you"></div>
+                                        </div>
+                                        <div class="twitter">
+                                            <div class="t_ttlogo"></div>
+                                            <div class="t_tt_name">트위터</div>
+                                            <div class="t_tt"></div>
+                                        </div>
+                                        <div class="kakao">
+                                            <div class="k_kalogo"></div>
+                                            <div class="k_ka_name">카카오스토리</div>
+                                            <div class="k_ka"></div>
+                                        </div>
+                                    </div>
+                                    <div class="footerW1_Link2 cf">
+                                        <div class="blog">
+                                            <div class="bloglogo"></div>
+                                            <div class="blog_name">블로그</div>
+                                            <div class="b_blog"></div>
+                                        </div>
+                                        <div class="band">
+                                            <div class="bandlogo"></div>
+                                            <div class="band_name">밴드</div>
+                                            <div class="b_band"></div>
+                                        </div>
+                                        <div class="naver">
+                                            <div class="n_nvlogo"></div>
+                                            <div class="n_nv_name">포스트</div>
+                                            <div class="n_nv"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footerW1_2 fl">
+                            <div class="footerW1_2_1">
+                                <div class="footerW1_2_1_Title">알바톡 이용안내</div>
+                                <div class="footerW1_2_1_Content">
+                                    <ul>
+                                        <li class="first"><a href="#">개인정보처리방침<span>&Iota;</span></a></li>
+                                        <li><a href="#">이용안내<span>&Iota;</span></a></li>
+                                        <li><a href="#">웹접근성정책<span>&Iota;</span></a></li>
+                                        <li><a href="#">저작권정책<span>&Iota;</span></a></li>
+                                        <li><a href="#">행정서비스현장<span>&Iota;</span></a></li>
+                                        <li><a href="#">전자우편 무단수집거부<span>&Iota;</span></a></li>
+                                        <li><a href="#">읽기전용프로그램</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footerW1_2_1">
+                                <div class="footerW1_2_1_Title">알바톡 문의</div>
+                                <div class="footerW1_2_1_Content">
+                                    <address>
+                                        <strong>주소</strong>경기도 안산시 상록구 사3동 한양대학로 55 <br/>
+                                        <strong>고객센터</strong>정부민원안내 전화 상담실 국번없이 110 / 교육부 민원 전화 상담실 02-6222-6060 <br/>/ 당직실 044-203-6118 <br/>
+                                        <strong>팩스번호</strong>(민원FAX)000-000-0000 / (문서접수FAX)000-000-0000<br/>
+                                        <strong>운영시간</strong>월 - 금 / 9:00 - 18:00 / 공휴일 제외<br/>
+
+                                    </address>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
 
         </div>
     </body>
