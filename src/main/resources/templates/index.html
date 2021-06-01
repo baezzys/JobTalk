@@ -1,21 +1,21 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org"
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-<html>
     <head>
 
         <link rel = "stylesheet" th:href= "@{/style.css}"/>
         <title>알바톡! | 알바생들의 리뷰 플랫폼 </title>
         <meta charset="utf-8">
-        
+
     </head>
 
     <body>
-        <div id = "wrap"> 
+        <div id = "wrap">
             <header id = "header">
                 <div class = "h_logo"><a href = "index.html"><img th:src = "@{/images/img2.png}" width = "80" height="80"> </a></div>
                 <h1> ALBA TALK</h1>
-                
+
                 <div class = "h_nav">
 
                 </div>
@@ -24,16 +24,16 @@
 
                 </div>
 
-                <div class ="write"> 
+                <div class ="write">
                     <a th:href="@{/write}">글쓰기</a>
                 </div>
 
 
-                <form class = "log_in" th:if="${param.error}" sec:authorize="isAnonymous()" th:action="@{/login}">
+                <form class = "log_in" method="POST" sec:authorize="isAnonymous()" th:href="@{/login}">
                     <a th:href="@{/login}">로그인</a>
                 </form>
 
-                <form class = "log_in" sec:authorize="isAuthenticated()">
+                <form class = "log_in" method="POST" sec:authorize="isAuthenticated()">
                     <a th:href="@{/logout}">로그아웃</a>
                 </form>
 
@@ -41,7 +41,7 @@
 
             <section id = "section">
 
-                <div class = "banner"> 
+                <div class = "banner">
                     <ul>
                         <li> <a href="http://www.moel.go.kr/index.do"> <img th:src ="@{/images/1318.png}" width= "80%" height = "350"></a></li>
                     </ul>
@@ -113,9 +113,9 @@
                     </ul>
 
                     <ul>
-                        
+
                     </ul>
-                    
+
                 </div>
             </section>
 

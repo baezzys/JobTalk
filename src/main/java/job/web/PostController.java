@@ -11,15 +11,4 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("/post")
 @Log4j2
 public class PostController {
-
-
-    public String savePost(Post post, @RequestParam("image") MultipartFile multipartFile ) {
-
-
-
-
-        return "index";
-    }
-
-
 }
