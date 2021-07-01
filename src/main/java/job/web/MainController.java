@@ -1,10 +1,12 @@
 package job.web;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@Log4j2
 public class MainController {
 
     @GetMapping("/")
@@ -20,6 +22,12 @@ public class MainController {
     @GetMapping("/user")
     public String userIndex() {
         return "user/index";
+    }
+
+    @GetMapping("/list")
+    public String list() {
+        log.info("list..........");
+        return "/post/list";
     }
 
     @GetMapping("/border_a")
